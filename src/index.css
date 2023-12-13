@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+
+.custom-bg-gradiant{
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,0.258140756302521) 0%, rgba(0,0,0,0.8463760504201681) 72%);
+}
