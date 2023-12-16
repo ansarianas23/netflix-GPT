@@ -45,28 +45,8 @@ const LandingPage = () => {
   return (
     <div className='text-white'>
 
-      {/* Header */}
-      <Container>
-          <div className='w-full flex items-center justify-between py-4 z-20 absolute'>
-            <div className='w-40 h-fit'>
-              <img className='w-full h-fit' src={NETFLIX_LOGO} alt="" />
-            </div>
-
-            <div className='flex space-x-6'>
-              <select className='bg-black bg-opacity-40 text-white px-6 rounded-sm border-gray-700 border-[1px] '>
-                <option className='text-black'>English</option>
-                <option className='text-black'>हिन्दी</option>
-              </select>
-
-              <Link to="signup"><button className='bg-netflix-red text-white px-4 rounded-sm font-semibold py-1 cursor-pointer'>Sign In</button></Link>
-            </div>
-          </div>
-      </Container>
-
       {/* Hero img */}
-      <section className='w-full h-[71vh] overflow-hidden relative flex justify-center items-center bg-hero bg-center bg-cover'>
-       
-        {/* <img className='w-full h-auto bg-contain bg-no-repeat' src={NETFLIX_BG_IMAGE} alt="" /> */}
+      <section className='w-full h-[71vh] overflow-hidden flex justify-center items-center bg-hero bg-center bg-cover relative'>
 
         <div className='flex flex-col items-center space-y-6 z-20 text-center'>
           <h1 className='text-5xl font-bold'>Enjoy big movies, hit series and more from ₹149.</h1>
@@ -74,14 +54,13 @@ const LandingPage = () => {
           <span className='text-2xl'>Ready to watch? Enter your email to create or restart your membership.</span>
 
           <div className='flex space-x-3'>
-            <input className='placeholder:font-semibold bg-black bg-opacity-60 border-[1px] rounded-sm py-2 px-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
-            <button className='flex items-center bg-netflix-red text-white font-semibold px-7 py-3 text-2xl rounded-sm'>Get Started <FaAngleRight className='ml-2'/></button>
+            <input className='placeholder:font-semibold bg-black bg-opacity-60 border-[1px] rounded-md py-2 px-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
+            <button className='flex items-center bg-netflix-red text-white font-semibold px-7 py-3 text-2xl rounded-md'>Get Started <FaAngleRight className='ml-2'/></button>
           </div>
         </div>
 
         {/* gradiant rapper div */}
-        <div className='w-full h-full z-10 absolute top-0 left-0 custom-bg-gradiant'>
-        </div>
+        <div className='w-full h-full z-10 absolute top-0 left-0 custom-bg-gradiant'></div>
 
       <Seperator position={"absolute bottom-0"}/>
       </section>
@@ -173,8 +152,8 @@ const LandingPage = () => {
           <h4 className='text-xl text-center'>Ready to watch? Enter your email to create or restart your membership.</h4>
 
           <div className='flex space-x-3'>
-            <input className='bg-black bg-opacity-60 border-[1px] rounded-sm py-2 px-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
-            <button className='flex items-center bg-netflix-red text-white font-semibold px-7 py-3 text-2xl rounded-sm'>Get Started <FaAngleRight className='ml-2'/></button>
+            <input className='bg-black bg-opacity-60 border-[1px] rounded-md py-2 px-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
+            <button className='flex items-center bg-netflix-red text-white font-semibold px-7 py-3 text-2xl rounded-md'>Get Started <FaAngleRight className='ml-2'/></button>
           </div>
 
         </section>

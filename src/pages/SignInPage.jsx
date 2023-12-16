@@ -1,12 +1,12 @@
 import React from 'react'
-import SignUpForm from '../components/SignUpForm'
+import SigninForm from "../components/SigninForm"
 
-const SignUpPage = () => {
+const SignInPage = () => {
   return (
     <div className='w-full min-h-screen bg-cover bg-no-repeat bg-center bg-hero relative'>
 
       <div className='w-full flex justify-center pt-20'>
-        <SignUpForm/>
+        <SigninForm/>
       </div>
 
       {/* gradiant rapper div */}
@@ -15,4 +15,5 @@ const SignUpPage = () => {
   )
 }
 
-export default SignUpPage
+export default SignInPage
+

@@ -8,9 +8,11 @@ import Container from './Container'
 const Layout = () => {
   return (
     <>
-    {/* <Header/> */}
-    <Outlet/>
+    <Container>
+      <Header/>
+    </Container>
 
+    <Outlet/>
     
     <Container>
       <Footer/>
