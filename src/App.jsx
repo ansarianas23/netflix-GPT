@@ -28,11 +28,9 @@ const App = () => {
   
   return (
     <>
-      <Container>
-        <div className='w-full absolute top-0 left-0'>
-          <Header/>
-        </div>
-      </Container>
+      <div className='w-full absolute top-0 z-50'>
+        <Header/>
+      </div>
 
       <Outlet/>
       

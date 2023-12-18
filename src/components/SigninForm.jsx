@@ -1,16 +1,19 @@
 import React, { useRef, useState } from 'react'
 import { checkValidateData } from '../utils/validate'
 import { auth } from '../utils/firebase'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import { addUser } from '../redux/userSlice/userSlice';
+import { useDispatch } from 'react-redux';
 
 const SignInForm = () => {
 
    const [isSigninForm, setIsSigninForm] = useState(true)
    const [error, setError] = useState(null)
+   const dispatch = useDispatch();
 
   
-  //  const name = useRef()
+   const name = useRef()
    const email = useRef()
    const password = useRef()
    const navigate = useNavigate()
@@ -25,7 +28,7 @@ const SignInForm = () => {
     if(errorMessage) return;
 
     if(isSigninForm){
-      // sign or login in logic
+      // sign in or login in logic
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -42,8 +45,20 @@ const SignInForm = () => {
       // signup logic
       createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
-        const user = userCredential.user;
-        navigate("/")
+        // const user = userCredential.user;
+        updateProfile(auth.currentUser, {
+          displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+        }).then(() => {
+          // Profile updated!
+          const {uid, email, displayName, photoURL: photoURL} = auth.currentUser;
+          dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}))
+          navigate("/home");
+
+
+        }).catch((error) => {
+          // An error occurred
+          setError(error.message);
+        });
         
       })
       .catch((error) => {
@@ -61,7 +76,7 @@ const SignInForm = () => {
       <h3 className='text-3xl font-semibold mb-7'>{isSigninForm? "Sign in" : "Sign Up"}</h3>
 
       <form onSubmit={(e)=>{e.preventDefault()}} className='w-full'>
-        {!isSigninForm && <input className='w-full rounded-sm bg-[#333333] text-white p-3 focus:bg-[#454545] outline-none placeholder:text-stone-400 mb-5' placeholder='Enter your name' type="text" />}
+        {!isSigninForm && <input ref={name} className='w-full rounded-sm bg-[#333333] text-white p-3 focus:bg-[#454545] outline-none placeholder:text-stone-400 mb-5' placeholder='Enter your name' type="text" />}
 
         <input ref={email} className='w-full rounded-sm bg-[#333333] text-white p-3 focus:bg-[#454545] outline-none placeholder:text-stone-400 mb-5' placeholder='Enter email or phone number' type="text" />
 

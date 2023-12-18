@@ -49,7 +49,7 @@ const LandingPage = () => {
       <section className='w-full h-[71vh] overflow-hidden flex justify-center items-center bg-hero bg-center bg-cover relative'>
 
         <div className='flex flex-col items-center space-y-6 z-20 text-center'>
-          <h1 className='text-5xl font-bold'>Enjoy big movies, hit series and more from ₹149.</h1>
+          <h1 className='text-5xl font-extrabold leading-snug'>The biggest Indian hits. Ready to watch here <br /> from ₹149.</h1>
           <span className='text-2xl'>Join today. Cancel anytime.</span>
           <span className='text-2xl'>Ready to watch? Enter your email to create or restart your membership.</span>
 
