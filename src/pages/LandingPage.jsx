@@ -75,7 +75,7 @@ const LandingPage = () => {
           <div className='w-[50%] relative overflow-hidden'>
             <img className='w-full h-fit bg-contain no bg-repeat relative z-30' src={NETFLIX_TV_POSTER} alt="" />
 
-            <video className='w-[73%] h-auto absolute left-[13%] top-[21%]' autoplay="" playsinline="" muted="true" loop="">
+            <video className='w-[73%] h-auto absolute left-[13%] top-[21%]' autoPlay muted loop>
               <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4"/>
             </video>
           </div>
@@ -110,7 +110,7 @@ const LandingPage = () => {
           <div className='w-[50%] relative'>
             <img className='w-full bg-contain no bg-repeat relative z-30' src={NETFLIX_COMPUTER_POSTER} alt="" />
             
-            <video className='w-[62%] h-auto absolute top-[8%] left-[19%]' autoplay="true" playsinline="" muted="true" loop="true">
+            <video className='w-[62%] h-auto absolute top-[8%] left-[19%]' autoPlay muted loop>
              <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" type="video/mp4"></source>
             </video>            
           </div>

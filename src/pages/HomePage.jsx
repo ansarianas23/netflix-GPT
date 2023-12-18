@@ -2,8 +2,10 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
+    <div className='w-full min-h-screen bg-white'>
+      <div>
+        
+      </div>
     </div>
   )
 }

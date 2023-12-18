@@ -1,12 +1,12 @@
 import React from 'react'
-import SigninForm from "../components/SigninForm"
+import SignInForm from '../components/SigninForm'
 
 const SignInPage = () => {
   return (
     <div className='w-full min-h-screen bg-cover bg-no-repeat bg-center bg-hero relative'>
 
-      <div className='w-full flex justify-center pt-20'>
-        <SigninForm/>
+      <div className='w-full flex justify-center py-20'>
+        <SignInForm/>
       </div>
 
       {/* gradiant rapper div */}

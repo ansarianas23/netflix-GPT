@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NETFLIX_LOGO } from "../utils/constans";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+
   return (
     <div className="w-full flex items-center justify-between py-4">
       <div className="w-40 h-fit">
