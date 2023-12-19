@@ -3,7 +3,6 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // apiKey: "AIzaSyClWsDKmh3mwkC4LfqhXn4N8rbkZoSy4Uw",
   apiKey: String(import.meta.env.VITE_FIREBASE_API_KEY),
   authDomain: String(import.meta.env.VITE_FIREBASE_AUTH_DOMAIN),
   projectId: String(import.meta.env.VITE_FIREBASE_PROJECT_ID),
