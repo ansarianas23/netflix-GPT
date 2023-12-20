@@ -8,7 +8,7 @@ const useNowPopularMovies = () => {
 
     const fetchNowPopularMovies = async () =>{
         try {
-          const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_TMDB_API_KEY}&page=1`);
+          const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${String(import.meta.env.VITE_TMDB_API_KEY)}&page=1`);
           const json = await data.json();
           dispatch(addNowPopularMovies(json.results))
           

@@ -11,8 +11,8 @@ const useTrailerDetails = (movieId) => {
     const trailerVideo = useSelector((store) => store.movies.trailerDetail);
 
     const fetchTrailer = async ()=>{
-        // const data = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${import.meta.env.VITE_TMDB_API_KEY}`)
-        const data = await fetch("https://api.themoviedb.org/3/movie/"+movieId+"/videos?language=en-US",API_OPTIONS);
+        const data = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${import.meta.env.VITE_TMDB_API_KEY}`)
+        // const data = await fetch("https://api.themoviedb.org/3/movie/"+movieId+"/videos?language=en-US",API_OPTIONS);
         
         const json = await data.json();
   
