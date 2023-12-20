@@ -11,7 +11,7 @@ const HomePage = () => {
   useNowPlayingMovies();
   useNowPopularMovies();
   useUpcomingMovies();
-  useTopRatedMovies();
+  // useTopRatedMovies();
 
   return (
     <div className='w-full min-h-screen mb-5'>
