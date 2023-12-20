@@ -46,16 +46,16 @@ const LandingPage = () => {
     <div className='text-white'>
 
       {/* Hero img */}
-      <section className='w-full h-[71vh] overflow-hidden flex justify-center items-center bg-hero bg-center bg-cover relative'>
+      <section className='w-full h-[490px] lg:h-[700px] overflow-hidden flex justify-center items-center bg-hero bg-center bg-cover relative'>
 
-        <div className='flex flex-col items-center space-y-6 z-20 text-center'>
-          <h1 className='text-5xl font-extrabold leading-snug'>The biggest Indian hits. Ready to watch here <br /> from ₹149.</h1>
-          <span className='text-2xl'>Join today. Cancel anytime.</span>
-          <span className='text-2xl'>Ready to watch? Enter your email to create or restart your membership.</span>
+        <div className='md:w-[90%] lg:w-[78%] h-fit flex flex-col items-center z-20 text-center px-4'>
+          <h1 className='text-3xl md:text-5xl font-bold leading-snug text-wrap'>The biggest Indian hits. Ready to watch here <br /> from ₹149.</h1>
+          <span className='text-lg md:text-2xl mt-2 md:mt-5'>Join today. Cancel anytime.</span>
+          <span className='text-lg md:text-xl mt-2 md:mt-5'>Ready to watch? Enter your email to create or restart your membership.</span>
 
-          <div className='flex space-x-3'>
-            <input className='placeholder:font-semibold bg-black bg-opacity-60 border-[1px] rounded-md py-2 px-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
-            <button className='flex items-center bg-netflix-red text-white font-semibold px-7 py-3 text-2xl rounded-md'>Get Started <FaAngleRight className='ml-2'/></button>
+          <div className='w-full h-fit flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-3 mt-3'>
+            <input className='placeholder:font-semibold bg-black bg-opacity-60 border-[1px] rounded-[5px] p-3 border-stone-600 md:w-96 w-full' placeholder='Email Address' type="text" />
+            <button className='w-fit flex items-center bg-netflix-red text-white font-semibold px-7 py-2 text-2xl rounded-[5px]'>Get Started <FaAngleRight className='ml-2'/></button>
           </div>
         </div>
 
@@ -66,10 +66,10 @@ const LandingPage = () => {
       </section>
 
       <Container>
-        <section className='flex items-center justify-between py-8'>
+        <section className='flex flex-col lg:flex-row items-center justify-between py-8 lg:px-8'>
           <div className='flex flex-col space-y-4 w-[50%]'>
-            <span className='text-5xl font-bold'>Enjoy on your TV</span>
-            <p className='text-2xl font-semibold'>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            <span className='text-3xl lg:text-5xl font-bold text-center lg:text-start'>Enjoy on your TV</span>
+            <p className='text-lg lg:text-2xl font-semibold text-center lg:text-start'>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
           </div>
           
           <div className='w-[50%] relative overflow-hidden'>
@@ -79,64 +79,72 @@ const LandingPage = () => {
               <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4"/>
             </video>
           </div>
-
         </section>
       </Container>
       
       <Seperator/>
 
       <Container>
-        <section className='flex items-center justify-between py-8'>
-          <div className='w-[50%]'>
-            <img className='w-full bg-contain no bg-repeat' src={NETFLIX_MOBILE_POSTER} alt="" />
+        <section className='flex flex-col lg:flex-row items-center justify-between py-8 lg:px-8'>
+          <div className='flex flex-col space-y-4 w-[50%]'>
+            <span className='text-3xl lg:text-5xl font-bold text-center lg:text-start'>Download your shows to watch offline</span>
+            <p className='text-lg lg:text-2xl font-semibold text-center lg:text-start'>Save your favourites easily and always have something to watch.</p>
           </div>
 
-          <div className='flex flex-col space-y-4 w-[50%]'>
-            <span className='text-5xl font-bold'>Download your shows to watch offline</span>
-            <p className='text-2xl font-semibold pr-10'>Save your favourites easily and always have something to watch.</p>
-          </div>
+          <div className='w-[50%] relative overflow-hidden'>
+            <img className='w-full h-fit bg-contain no bg-repeat relative z-30' src={NETFLIX_MOBILE_POSTER} alt="" />
+
+            <video className='w-[73%] h-auto absolute left-[13%] top-[21%]' autoPlay muted loop>
+              <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4"/>
+            </video>
+          </div>          
         </section>
       </Container>
 
       <Seperator/>
 
       <Container>
-        <section className='flex items-center justify-between py-8'>
+        <section className='flex flex-col lg:flex-row items-center justify-between py-8 lg:px-8'>
           <div className='flex flex-col space-y-4 w-[50%]'>
-            <span className='text-5xl font-bold'>Watch everywhere</span>
-            <p className='text-2xl font-semibold pr-10'>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            <span className='text-3xl lg:text-5xl font-bold text-center lg:text-start'>Watch everywhere</span>
+            <p className='text-lg lg:text-2xl font-semibold text-center lg:text-start'>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
           </div>
 
-          <div className='w-[50%] relative'>
-            <img className='w-full bg-contain no bg-repeat relative z-30' src={NETFLIX_COMPUTER_POSTER} alt="" />
-            
-            <video className='w-[62%] h-auto absolute top-[8%] left-[19%]' autoPlay muted loop>
-             <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" type="video/mp4"></source>
-            </video>            
-          </div>
+          <div className='w-[50%] relative overflow-hidden'>
+            <img className='w-full h-fit bg-contain no bg-repeat relative z-30' src={NETFLIX_COMPUTER_POSTER} alt="" />
+
+            <video className='w-[73%] h-auto absolute left-[13%] top-[21%]' autoPlay muted loop>
+              <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4"/>
+            </video>
+          </div>          
         </section>
       </Container>
+
 
       <Seperator/>
 
       <Container>
-        <section className='flex items-center justify-between py-8'>
-          <div className='w-[50%]'>
-            <img className='w-full bg-contain no bg-repeat' src={NETFLIX_CHILDREN_POSTER} alt="" />
+        <section className='flex flex-col lg:flex-row items-center justify-between py-8 lg:px-8'>
+          <div className='flex flex-col space-y-4 w-[50%]'>
+            <span className='text-3xl lg:text-5xl font-bold text-center lg:text-start'>Create profiles for kids</span>
+            <p className='text-lg lg:text-2xl font-semibold text-center lg:text-start'>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
           </div>
 
-          <div className='flex flex-col space-y-4 w-[50%]'>
-            <span className='text-5xl font-bold'>Create profiles for kids</span>
-            <p className='text-2xl font-semibold pr-10'>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
-          </div>
+          <div className='w-[50%] relative overflow-hidden'>
+            <img className='w-full h-fit bg-contain no bg-repeat relative z-30' src={NETFLIX_CHILDREN_POSTER} alt="" />
+
+            <video className='w-[73%] h-auto absolute left-[13%] top-[21%]' autoPlay muted loop>
+              <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4"/>
+            </video>
+          </div>          
         </section>
       </Container>
       
       <Seperator/>
 
       <Container>
-        <section className='flex flex-col items-center space-y-5 py-16'>
-          <h2 className='text-center text-5xl font-bold'>Frequently Asked Questions</h2>
+        <section className='flex flex-col items-center space-y-5 py-16 px-5'>
+          <h2 className='text-center text-3xl lg:text-5xl font-bold'>Frequently Asked Questions</h2>
 
           <div className='w-full space-y-2 py-6'>
           {AccordianData.map((Acc, index)=>{
@@ -151,9 +159,9 @@ const LandingPage = () => {
 
           <h4 className='text-xl text-center'>Ready to watch? Enter your email to create or restart your membership.</h4>
 
-          <div className='flex space-x-3'>
-            <input className='bg-black bg-opacity-60 border-[1px] rounded-md py-2 px-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
-            <button className='flex items-center bg-netflix-red text-white font-semibold px-7 py-3 text-2xl rounded-md'>Get Started <FaAngleRight className='ml-2'/></button>
+          <div className='flex flex-col md:flex-row justify-center items-center flex-wrap space-y-3 md:space-y-0 md:space-x-3 mt-3'>
+            <input className='placeholder:font-semibold bg-black bg-opacity-60 border-[1px] rounded-[5px] p-3 border-stone-600 w-96' placeholder='Email Address' type="text" />
+            <button className='w-fit flex items-center bg-netflix-red text-white font-semibold px-7 py-2 text-2xl rounded-[5px]'>Get Started <FaAngleRight className='ml-2'/></button>
           </div>
 
         </section>

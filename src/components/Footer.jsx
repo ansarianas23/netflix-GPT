@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='w-full flex flex-col text-stone-300 py-12 space-y-4'>
+    <div className='w-full flex flex-col text-stone-300 px-8 py-5 lg:py-12 space-y-4'>
       <div>Questions? Call <span className='underline'>000-800-919-1694</span></div>
 
-      <ul className='grid grid-cols-4 underline cursor-pointer gap-y-2'>
+      <ul className='grid grid-cols-2 lg:grid-cols-4 underline cursor-pointer gap-y-2 flex-wrap'>
         <li>FAQ</li>
         <li>Help Centre</li>
         <li>Account</li>
