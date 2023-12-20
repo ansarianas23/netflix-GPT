@@ -1,16 +1,14 @@
-import React, { useContext } from "react";
+import React  from "react";
 import { NETFLIX_LOGO, NETFLIX_USERICON } from "../utils/constans";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { FaSearch } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa6";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { removeUser } from "../redux/userSlice/userSlice";
-
-
 
 const Header = () => {
+
   const navigate = useNavigate();
 
   const handleSignOut = ()=>{
@@ -28,14 +26,14 @@ const Header = () => {
       <div className="flex items-center space-x-5">
         {/* Logo */}
         <div className={`${!user? "w-36": "w-28"} h-fit`}>
-          <Link to="/"><img className="w-full h-full" src={NETFLIX_LOGO} alt="" /></Link>
+          <Link to={user? "/home": "/"}><img className="w-full h-full" src={NETFLIX_LOGO} alt="" /></Link>
         </div>
 
         {/* categories */}
-         {user && <ul className="flex space-x-4">
+         {user && <ul className="flex space-x-4 text-white font-medium">
             <li className="cursor-pointer">Home</li>
             <li className="cursor-pointer">TV Shows Movies</li>
-            <li className="cursor-pointer">New $ Popular</li>
+            <li className="cursor-pointer">New & Popular</li>
             <li className="cursor-pointer">My List</li>
             <li className="cursor-pointer">Browse by languages</li>
           </ul>}

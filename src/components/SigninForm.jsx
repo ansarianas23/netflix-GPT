@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import { checkValidateData } from '../utils/validate'
 import { auth } from '../utils/firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
 import { addUser } from '../redux/userSlice/userSlice';
 import { useDispatch } from 'react-redux';
 
@@ -16,7 +15,6 @@ const SignInForm = () => {
    const name = useRef()
    const email = useRef()
    const password = useRef()
-   const navigate = useNavigate()
 
   const toggleForm = () =>{
     setIsSigninForm(!isSigninForm)
@@ -32,8 +30,6 @@ const SignInForm = () => {
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate('/home')
-        console.log("from signin compnent",user)
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -52,8 +48,6 @@ const SignInForm = () => {
           // Profile updated!
           const {uid, email, displayName, photoURL: photoURL} = auth.currentUser;
           dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}))
-          navigate("/home");
-
 
         }).catch((error) => {
           // An error occurred

@@ -11,10 +11,30 @@
 
 body{
     background-color: black;
+    max-width: 100vw;
+    overflow-x: hidden;
+
 }
 
 
 .custom-bg-gradiant{
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,0.258140756302521) 0%, rgba(0,0,0,0.8463760504201681) 72%);
+}
+
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.smoothScroll{
+    scroll-behavior: smooth;
+    transition: scroll 0.3s ease-in-out;
 }
