@@ -7,6 +7,8 @@ const useNowPlayingMovies = () => {
 
     const dispatch = useDispatch()
 
+    const nowPlayingMovies = useSelector((store) => store.movies.nowPlayingMovies);
+
     const fetchMoviesNowPlaying = async () =>{
         try {
           const data = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${String(import.meta.env.VITE_TMDB_API_KEY)}&page=1`);
@@ -22,7 +24,7 @@ const useNowPlayingMovies = () => {
       }
     
       useEffect(()=>{
-        fetchMoviesNowPlaying();
+        !nowPlayingMovies && fetchMoviesNowPlaying();
       },[])
 }
 

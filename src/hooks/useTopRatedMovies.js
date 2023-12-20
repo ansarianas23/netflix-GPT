@@ -6,6 +6,8 @@ const useTopRatedMovies = () => {
 
     const dispatch = useDispatch()
 
+    const topRatedMovies = useSelector((store) => store.movies.TopRatedMovies);
+
     const fetchTopRatedMovies = async () =>{
         try {
           const data = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${String(import.meta.env.VITE_TMDB_API_KEY)}&page=1`);
@@ -18,7 +20,7 @@ const useTopRatedMovies = () => {
       }
     
       useEffect(()=>{
-        fetchTopRatedMovies();
+        !topRatedMovies && fetchTopRatedMovies();
       },[])
 }
 

@@ -6,6 +6,8 @@ const useUpcomingMovies = () => {
 
     const dispatch = useDispatch()
 
+    const upcomingMovies = useSelector((store) => store.movies.UpcomingMovies);
+
     const fetchUpcomingMovies = async () =>{
         try {
           const data = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${String(import.meta.env.VITE_TMDB_API_KEY)}&page=1`);
@@ -18,7 +20,7 @@ const useUpcomingMovies = () => {
       }
     
       useEffect(()=>{
-        fetchUpcomingMovies();
+        !upcomingMovies && fetchUpcomingMovies();
       },[])
 }
 
