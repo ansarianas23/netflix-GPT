@@ -11,12 +11,13 @@ const VideoBackground = ({ movieId }) => {
   return (
     <div className='w-screen aspect-video bg-gradient-to-b from-black'>
         <iframe 
-        className='w-full aspect-video'
-        src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?autoplay=1&loop=1&mute=1&controls=0&showinfo=0"}
-        title="YouTube video player" 
-        frameBorder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowFullScreen></iframe>
+          className='w-full aspect-video'
+          src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?autoplay=1&loop=1&mute=1&controls=0&showinfo=0"}
+          title="YouTube video player" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
+          allowFullScreen>
+        </iframe>
       </div>
   )
 }
