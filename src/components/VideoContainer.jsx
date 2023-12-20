@@ -6,19 +6,14 @@ import MovieInfo from './MovieInfo';
 
 const VideoContainer = () => {
 
-  const movies = useSelector((state)=> state.movies.nowPlayingMovies);
-  // console.log(movies);
+  const movies = useSelector((state)=> state.movies?.nowPlayingMovies);
   
   if(movies === null) return;
 
   // random movie id based on wich trailer will be fetched
-  // const { id, original_title, overview } = movies[Math.floor(Math.random() * 20)]
-  const mainMovie = movies[Math.floor(Math.random() * 20)];
+  const randomMovie = movies[Math.floor(Math.random() * 20)];
 
-  // this data is coming fine and passing forward fine
-  const { id, original_title, overview } = mainMovie
-  // console.log(id, original_title, overview)
-
+  const { id, original_title, overview } = randomMovie
 
   return (
     <div className='w-screen h-fit relative'>
