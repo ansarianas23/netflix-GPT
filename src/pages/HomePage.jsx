@@ -3,18 +3,18 @@ import VideoContainer from '../components/VideoContainer';
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies';
 import MovieContainer from '../components/MovieContainer';
 import useNowPopularMovies from '../hooks/useNowPopularMovies';
-import useTopRatedMovies from '../hooks/useTopratedMovies';
 import useUpcomingMovies from '../hooks/useUpcomingMovies';
+import useTopRatedMovies from '../hooks/useTopratedMovies';
 
 const HomePage = () => {
 
   useNowPlayingMovies();
   useNowPopularMovies();
-  useTopRatedMovies();
   useUpcomingMovies();
+  useTopRatedMovies();
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen mb-5'>
       <VideoContainer/>
       <MovieContainer/>
     </div>

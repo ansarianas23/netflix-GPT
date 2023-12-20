@@ -22,4 +22,4 @@ const useTopRatedMovies = () => {
       },[])
 }
 
-export default useTopRatedMovies
+export default useTopRatedMovies;
