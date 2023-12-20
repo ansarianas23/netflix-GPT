@@ -6,8 +6,8 @@ const MovieInfo = ({original_title, overview}) => {
     
   return (
     <div className='w-full aspect-video bg-gradient-to-r from-black absolute top-0 left-0 text-white py-[20%] px-[5%] space-y-6'>
-        <h1 className='text-5xl font-bold'>{original_title}</h1>
-        <p className='w-1/4'>{overview.slice(0,150)}...</p>
+        <h1 className='text-3xl lg:text-5xl font-bold'>{original_title}</h1>
+        <p className='w-[60%] lg:w-[40%]'>{overview.slice(0,150)}...</p>
 
         <div className='flex space-x-2'>
           <button className='bg-white text-black px-5 py-2 flex items-center font-bold rounded-sm hover:bg-opacity-80 transition-all'>Play <FaPlay className='ml-2'/></button>
