@@ -77,7 +77,7 @@ const Header = () => {
 
           {/* dropdown container */}
           {toggleDropdown && <div onMouseLeave={()=>{setToggleDropDown(false)}} className="w-48 p-3 h-fit bg-black bg-opacity-80 rounded-md border-stone-800 border-[1px] absolute -left-36 top-10">
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm relative">
               <li className="hover:text-red-500 cursor-pointer">Manage Profile</li>
               <li className="border-b-[1px] border-stone-800"></li>
               <li className="hover:text-red-500 cursor-pointer">Kids</li>
@@ -86,6 +86,7 @@ const Header = () => {
               <li className="hover:text-red-500 cursor-pointer">Account</li>
               <li className="hover:text-red-500 cursor-pointer">Help Center</li>
               <li onClick={handleSignOut} className="hover:text-red-500 cursor-pointer">Sign out of Netflix</li>
+              <span onClick={()=>{setToggleDropDown(false)}} className="text-xl absolute -top-5 right-0 cursor-pointer hover:text-red-500">x</span>
             </ul>
 
             {/* arrow tool tip */}
