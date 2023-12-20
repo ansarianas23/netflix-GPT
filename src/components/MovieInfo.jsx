@@ -5,7 +5,7 @@ const MovieInfo = ({original_title, overview}) => {
 
     
   return (
-    <div className='w-full aspect-video bg-gradient-to-r from-black absolute top-0 left-0 text-white py-[20%] px-[5%] space-y-6'>
+    <div className='w-full md:aspect-video bg-gradient-to-r from-black md:absolute md:top-0 md:left-0 text-white py-8 md:py-[20%] px-[5%] space-y-6'>
         <h1 className='text-3xl lg:text-5xl font-bold'>{original_title}</h1>
         <p className='w-[60%] lg:w-[40%]'>{overview.slice(0,150)}...</p>
 

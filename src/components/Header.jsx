@@ -35,7 +35,7 @@ const Header = () => {
         </div>
 
         {/* categories */}
-         {user && <ul className="flex space-x-4 text-white font-medium">
+         {user && <ul className="space-x-4 text-white font-medium hidden md:flex">
             <li className="cursor-pointer hover:text-red-500 transition-all delay-75">Home</li>
             <li className="cursor-pointer hover:text-red-500 transition-all delay-75">TV Shows Movies</li>
             <li className="cursor-pointer hover:text-red-500 transition-all delay-75">New & Popular</li>

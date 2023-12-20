@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addUpcomingMovies } from '../redux/moviesSlice/moviesSlice';
 import { useEffect } from 'react';
 
