@@ -4,14 +4,14 @@ import useNowPlayingMovies from '../hooks/useNowPlayingMovies';
 import MovieContainer from '../components/MovieContainer';
 import useNowPopularMovies from '../hooks/useNowPopularMovies';
 import useUpcomingMovies from '../hooks/useUpcomingMovies';
-import useTopRatedMovies from '../hooks/useTopratedMovies';
+import useTopRatedMovies from '../hooks/useTopRatedMovies';
 
 const HomePage = () => {
 
   useNowPlayingMovies();
   useNowPopularMovies();
   useUpcomingMovies();
-  // useTopRatedMovies();
+  useTopRatedMovies();
 
   return (
     <div className='w-full min-h-screen mb-5'>
