@@ -42,13 +42,13 @@ const GptSearchBar = () => {
 
 
   return (
-    <>
+    <div className='z-40'>
       <h2 className='text-white text-center text-3xl py-3'>Movie Suggestion by CHAT GPT Currently This feature is on hold</h2>
       <form className='w-full h-fit flex flex-col items-center space-y-3 md:space-y-0 md:flex-row md:space-x-3' onSubmit={(e)=>{e.preventDefault();}}>
-        <input onChange={(e)=>{setSerachText(e.target.value)}} placeholder='Seacrh what type of movie you want to watch!' type="text" className='w-full rounded-md outline-none px-2 py-3'/>
+        <input onChange={(e)=>{setSerachText(e.target.value)}} placeholder='Seacrh what type of movie you want to watch!' type="text" className='w-full rounded-md outline-none p-3 bg-black bg-opacity-70 text-white placeholder:font-semibold'/>
         <button className='bg-netflix-red text-white py-3 px-5 rounded-md font-semibold w-fit' onClick={hanleGPTSearchClick}>Search</button>
       </form>
-    </>
+    </div>
   )
 }
 
