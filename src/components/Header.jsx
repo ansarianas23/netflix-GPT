@@ -26,8 +26,7 @@ const Header = () => {
   // console.log(user);
 
   return (
-    // <div className={`w-full flex items-center justify-between py-4 ${!user? "px-80": "px-10"}`}>
-    <div className="w-full flex items-center justify-between p-4">
+    <div className="w-full flex items-center justify-between p-4 bg-gradient-to-b from-black">
       <div className="flex items-center space-x-5">
         {/* Logo */}
         <div className="w-24 md:w-36 h-auto">
@@ -61,7 +60,7 @@ const Header = () => {
       {/* Right user div */}
       {user && <div className="flex items-center space-x-5 text-white">
         <span>
-          <FaSearch className="text-lg cursor-pointer"/>
+          <Link to="search"><FaSearch className="text-lg cursor-pointer"/></Link>
         </span>
 
         <span>

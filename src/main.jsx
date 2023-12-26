@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage.jsx'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
 import appStore from './redux/store/appStore.js'
+import GptSearchPage from './pages/GptSearchPage.jsx'
 
 
 const router = createBrowserRouter(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/signin' element={<SignInPage/>}/>
         <Route path='/home' element={<HomePage/>}/>
+        <Route path='/search' element={<GptSearchPage/>}/>
       </Route>
   )
 )
