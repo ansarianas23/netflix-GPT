@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { addUser } from '../redux/userSlice/userSlice';
 import { useDispatch } from 'react-redux';
 
-const SignInForm = () => {
+const LoginForm = () => {
 
    const [isSigninForm, setIsSigninForm] = useState(true)
    const [error, setError] = useState(null)
@@ -95,4 +95,4 @@ const SignInForm = () => {
   )
 }
 
-export default SignInForm;
+export default LoginForm;
