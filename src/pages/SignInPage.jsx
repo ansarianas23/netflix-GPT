@@ -1,11 +1,11 @@
 import React from 'react'
-import SignInForm from '../components/SigninForm'
+import SignInForm from '../components/SignInForm'
 
 const SignInPage = () => {
   return (
     <div className='w-full min-h-screen bg-cover bg-no-repeat bg-center bg-hero relative'>
 
-      <div className='w-full min-h-screen flex justify-center items-center px-5'>
+      <div className='w-full flex justify-center items-center px-2 pt-52'>
         <SignInForm/>
       </div>
 
