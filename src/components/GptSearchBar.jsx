@@ -12,13 +12,13 @@ const GptSearchBar = () => {
   const gptQuery = "behave this as a movie search model Query: "+ serachText +". and give names of 5 movies that matches query give me result like this Example: golmaal 3, phor hera pheri, dhoom 3, don, pathaan"
 
   // GPT API Function
-  const getGPTResults = async () =>{
-    const gptResults = await openai.chat.completions.create({
-      messages: [{ role: "user", content: gptQuery }],
-      model: "gpt-3.5-turbo",
-    });
-    // console.log(gptResults.choices[0]);
-  }
+  // const getGPTResults = async () =>{
+  //   const gptResults = await openai.chat.completions.create({
+  //     messages: [{ role: "user", content: gptQuery }],
+  //     model: "gpt-3.5-turbo",
+  //   });
+  //   // console.log(gptResults.choices[0]);
+  // }
 
    // search movie in TMDB
    const searchMovieTMDB = async (movie) => {
