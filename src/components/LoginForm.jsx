@@ -9,6 +9,7 @@ const LoginForm = () => {
 
    const [isSigninForm, setIsSigninForm] = useState(true)
    const [error, setError] = useState(null)
+   const [showPassword, setShowPassword] = useState(false)
    const dispatch = useDispatch();
 
   
@@ -72,7 +73,10 @@ const LoginForm = () => {
 
         <input ref={email} className='w-full rounded-sm bg-[#333333] text-white p-3 focus:bg-[#454545] outline-none placeholder:text-stone-400 mb-5' placeholder='Enter email or phone number' type="text" />
 
-        <input ref={password} className='w-full rounded-sm bg-[#333333] text-white p-3 focus:bg-[#454545] outline-none placeholder:text-stone-400' placeholder='Password' type="password" />
+        <div className='relative'>
+          <input ref={password} className='w-full rounded-sm bg-[#333333] text-white p-3 pr-14 focus:bg-[#454545] outline-none placeholder:text-stone-400' placeholder='Password' type={showPassword ? "text" : "password"} />
+          <span className='text-xs cursor-pointer absolute top-[35%] right-3 font-bold' onClick={()=>{setShowPassword(!showPassword)}}>SHOW</span>
+        </div>
 
         <p className='text-red-600 pt-3'>{error}</p>
 
