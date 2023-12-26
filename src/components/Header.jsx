@@ -7,12 +7,15 @@ import { FaRegBell } from "react-icons/fa6";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaPlus } from "react-icons/fa6";
 
 
 const Header = () => {
 
   const navigate = useNavigate();
   const [toggleDropdown, setToggleDropDown] = useState(false)
+  const [showHamburger, setShowHamburger] = useState(false);
 
   const handleSignOut = ()=>{
     signOut(auth).then(() => {
@@ -26,15 +29,31 @@ const Header = () => {
   // console.log(user);
 
   return (
-    <div className="w-full flex items-center justify-between p-4 bg-gradient-to-b from-black">
+    <div className="w-full flex items-center justify-between p-4 bg-gradient-to-b from-black relative">
+        {/* hamburder body */}
+        {user && <div className={`bg-black bg-opacity-90 w-[50vw] h-screen absolute top-0 left-0 p-10 flex ${showHamburger? "-translate-x-0" : "-translate-x-full"} transition-all`}>
+          <ul className="text-white font-medium space-y-6">
+            <li className="cursor-pointer hover:text-red-500 transition-all delay-75">Home</li>
+            <li className="cursor-pointer hover:text-red-500 transition-all delay-75">TV Shows Movies</li>
+            <li className="cursor-pointer hover:text-red-500 transition-all delay-75">New & Popular</li>
+            <li className="cursor-pointer hover:text-red-500 transition-all delay-75">My List</li>
+            <li className="cursor-pointer hover:text-red-500 transition-all delay-75">Browse by languages</li>
+          </ul>
+
+          <span className="text-white absolute top-5 right-5 rotate-45 text-3xl cursor-pointer" onClick={()=>{setShowHamburger(!showHamburger)}}><FaPlus /></span>
+        </div>}
+
       <div className="flex items-center space-x-5">
+        {/* hamburger */}
+        {user && <span className="text-stone-400 text-3xl lg:hidden" onClick={()=>{setShowHamburger(!showHamburger)}}><GiHamburgerMenu /></span>}
+
         {/* Logo */}
         <div className="w-24 md:w-36 h-auto">
           <Link to={user? "/home": "/"}><img className="w-full h-full" src={NETFLIX_LOGO} alt="" /></Link>
         </div>
 
         {/* categories */}
-         {user && <ul className="space-x-4 text-white font-medium hidden md:flex">
+         {user && <ul className="space-x-4 font-medium text-white hidden lg:flex">
             <li className="cursor-pointer hover:text-red-500 transition-all delay-75">Home</li>
             <li className="cursor-pointer hover:text-red-500 transition-all delay-75">TV Shows Movies</li>
             <li className="cursor-pointer hover:text-red-500 transition-all delay-75">New & Popular</li>
