@@ -63,8 +63,6 @@ const SignInForm = () => {
     }
   }
 
-
-
   return (
     <div className='text-white flex flex-col w-[450px] h-fit bg-black px-10 sm:px-12 pt-10 pb-20 rounded-md bg-opacity-70 z-20'>
       <h3 className='text-3xl font-semibold mb-7'>{isSigninForm? "Sign in" : "Sign Up"}</h3>
@@ -97,4 +95,4 @@ const SignInForm = () => {
   )
 }
 
-export default SignInForm
+export default SignInForm;
