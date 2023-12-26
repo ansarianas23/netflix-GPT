@@ -21,7 +21,7 @@ const GptSearchPage = () => {
         </div>
 
         <div className='bg-black bg-opacity-70 pb-10 mt-10'>
-          <button className='text-white m-5 bg-netflix-red px-2 py-1 rounded-md absolute right-0' onClick={()=>{dispatch(removeGptMoviesResults())}}>Clear results</button>
+          <button className='text-white m-5 bg-netflix-red hover:bg-red-700 transition-all px-2 py-1 rounded-md absolute right-0' onClick={()=>{dispatch(removeGptMoviesResults())}}>Clear results</button>
           {/*Movie List will be here  */}
           <MovieRow
             title={GptMoviesResults?.length ? "Your Search Results" : "Search Something"}
